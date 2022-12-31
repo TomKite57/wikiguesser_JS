@@ -1,16 +1,20 @@
 //============================================================================//
 // Imports
-const fs = require('fs');
-const cheerio = require('cheerio');
-const axios = require('axios');
-const natural = require('natural');
-const path = require('path');
+//const fs = require('fs');
+//const cheerio = require('cheerio');
+//const axios = require('axios');
+//const natural = require('natural');
+//const path = require('path');
+//const seedrandom = require('seedrandom');
+//const luxon = require("luxon");
 
-const seedrandom = require('seedrandom');
-const luxon = require("luxon");
+import { readFileSync } from "fs";
+import cheerio from "cheerio";
+import axios from "axios";
+import natural from "natural";
+import path from "path";
+import seedrandom from "seedrandom";
 
-//import seedrandom from 'seedrandom';
-//import { DateTime } from "luxon";
 
 //============================================================================//
 // Constants
@@ -29,7 +33,7 @@ var CUSTOM_TOKENS = ["\'\'", "``", "retrieved", "archived", "isbn", "doi", "oclc
 //============================================================================//
 // File reading / writing
 function read_file_to_array(filename) {
-    const file_contents = fs.readFileSync(filename, 'utf8');
+    const file_contents = readFileSync(filename, 'utf8');
     let lines = file_contents.split('\n');
     if (lines[lines.length - 1] === '')
         lines = lines.slice(0, -1);
@@ -38,7 +42,7 @@ function read_file_to_array(filename) {
 }
 
 function read_file_to_object(filename) {
-    const file_contents = fs.readFileSync(filename, 'utf8');
+    const file_contents = readFileSync(filename, 'utf8');
     const lines = file_contents.split('\n');
     const data = {};
 
@@ -54,7 +58,7 @@ function read_file_to_object(filename) {
 }
 
 function read_file_to_map(filename) {
-    const file_contents = fs.readFileSync(filename, 'utf8');
+    const file_contents = readFileSync(filename, 'utf8');
     const lines = file_contents.split('\n');
     const data = new Map();
 
@@ -67,18 +71,6 @@ function read_file_to_map(filename) {
     }
 
     return data;
-}
-
-async function dumpTextToFile(text) {
-    // Write the text to a file named "text.txt"
-    const filePath = path.join(__dirname, 'text.txt');
-    try {
-        // Use the fs module to write the text to the file
-        await fs.promises.writeFile(filePath, text);
-        console.log(`Text written to file: ${filePath}`);
-    } catch (error) {
-        console.error(error);
-    }
 }
 
 //============================================================================//
@@ -357,8 +349,7 @@ async function main() {
     var all_word_frequencies = read_file_to_map(ALL_FREQUENCY_FNAME);
     var common_words = create_set_from_map(all_word_frequencies, FREQUENCY_CUTOFF);
 
-    //var article_title = choose_random_article(all_article_titles);
-    var article_title = all_article_titles[Math.floor(seedrandom.alea(luxon.dayString)() * all_article_titles.length)];
+    var article_title = choose_random_article(all_article_titles);
     var page = await get_wikipedia_page(article_title);
     var tokens = tokenize_text(page);
     tokens = apply_all_filters(tokens, article_title, common_words);
@@ -383,7 +374,7 @@ async function get_title_and_hints(daystring) {
         var common_words = create_set_from_map(all_word_frequencies, FREQUENCY_CUTOFF);
 
         //var article_title = choose_random_article(all_article_titles);
-        var article_title = all_article_titles[Math.floor(seedrandom.alea(dayString)() * all_article_titles.length)];
+        var article_title = all_article_titles[Math.floor(seedrandom.alea(daystring)() * all_article_titles.length)];
         var page = await get_wikipedia_page(article_title);
         var tokens = tokenize_text(page);
         tokens = apply_all_filters(tokens, article_title, common_words);
