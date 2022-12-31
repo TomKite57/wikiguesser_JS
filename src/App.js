@@ -1,3 +1,4 @@
+import seedrandom from "seedrandom";
 import styled from "styled-components";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { Guesses } from "./components/Guesses";
@@ -84,14 +85,13 @@ const toPlaceholder = (value, answer) =>
 const normalise = value => value.toLowerCase().replace(/[^a-z]/g, "");
 
 
-const TEST_TITLE = "Property"
+const TEST_TITLES = ["Property"]
 const HINTS = ["owner", "legal", "rights", "remove", "owned", "persons", "improve", "institute", "anthropology", "template"]
 const ATTEMPTS = 10
 
 function App() {
   const dayString = useMemo(getDayString, []);
-  // const [bracketWord, setBracketWord] = useState(bracketWords[Math.floor(seedrandom.alea(dayString)() * bracketWords.length)]);
-  const [answer, setAnswer] = useState(normalise(TEST_TITLE));
+  const [answer, setAnswer] = useState(normalise(TEST_TITLES[Math.floor(seedrandom.alea(dayString)() * TEST_TITLES.length)]));
   const [hints, setHints] = useState(HINTS);
   const [lastHint, setLastHint] = useState("");
   const [input, setInput] = useState("");
