@@ -247,6 +247,105 @@ function uncommon_ordering(fdist, freq_data) {
     return rval.slice(0, 10);
 }
 
+//============================================================================//
+// Game class
+class Game {
+    constructor(title, guesses) {
+        let all_article_titles = read_file_to_array(SCRAPE_FNAME);
+        this.article_title = title;
+        this.ordered_guesses = guesses;
+        this.guess_count = 0;
+        this.revealed_words = [];
+    }
+
+    welcome_message() {
+        console.log("Welcome!");
+        console.log("A popular Wikipedia article has been picked at random.");
+        console.log("Guess the title of the article to reveal common words from that article.");
+        console.log("Press enter to continue");
+        //prompt();
+    }
+
+    more_turns() {
+        return this.ordered_guesses.length !== 0;
+    }
+
+    secret_print() {
+        let str = this.article_title.split("").map(ch => (ch !== " " ? "_" : " ")).join(" ");
+
+        str += "  (";
+        const title_words = this.article_title.split(" ");
+        for (let i = 0; i < title_words.length; i++) {
+            str += `${title_words[i].length}`;
+            if (i !== title_words.length - 1) {
+                str += ",";
+            }
+        }
+        str += ")";
+
+        console.log(str);
+    }
+
+    public_print() {
+        console.log("The article is: ");
+        console.log(`${this.article_title}`);
+    }
+
+    reveal_new_word() {
+        this.revealed_words.push(this.ordered_guesses.pop());
+    }
+
+    print_all_clues() {
+        const total = this.ordered_guesses.length + this.revealed_words.length;
+        const current = this.revealed_words.length;
+        let current_str = current.toString();
+
+        const num_space = total.toString().length;
+        const left_space = num_space * 2 + 5;
+
+        current_str = " ".repeat(num_space - current_str.length) + current_str;
+
+        for (let i = 0; i < this.revealed_words.length; i++) {
+            if (i === this.revealed_words.length - 1) {
+                console.log(` (${current_str}/${total}) [${this.revealed_words[i]}]`);
+            } else {
+                console.log(`${" ".repeat(left_space)}[${this.revealed_words[i]}]`);
+            }
+        }
+    }
+
+    async play() {
+        //clear_screen();
+        this.welcome_message();
+
+        while (this.more_turns()) {
+            //clear_screen();
+            this.reveal_new_word();
+            this.secret_print();
+            this.print_all_clues();
+            //const user_guess = prompt("Guess the wikipedia article: ");
+            const user_guess = "wrong";
+            if (user_guess.toLowerCase() === this.article_title.toLowerCase()) {
+                this.win_state();
+                return;
+            }
+        }
+        this.lose_state();
+    }
+
+    win_state() {
+        console.log("Win!");
+        this.public_print();
+    }
+
+    lose_state() {
+        console.log("Lose!");
+        this.public_print();
+    }
+}
+
+
+
 // Main code
 async function main() {
     var all_article_titles = read_file_to_array(SCRAPE_FNAME);
@@ -261,6 +360,9 @@ async function main() {
     tokens = apply_all_filters(tokens, article_title, common_words);
     var freq_dist = create_frequency_map(tokens);
     var guess_order = uncommon_ordering(freq_dist, all_word_frequencies);
+
+    var game = new Game(article_title, guess_order);
+    game.play();
 
     // Debug
     //console.log(all_article_titles);
