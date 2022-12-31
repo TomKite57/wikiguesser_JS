@@ -5,6 +5,11 @@ const cheerio = require('cheerio');
 const axios = require('axios');
 const natural = require('natural');
 const path = require('path');
+const seedrandom = require('seedrandom');
+const luxon = require("luxon");
+
+//import seedrandom from 'seedrandom';
+//import { DateTime } from "luxon";
 
 //============================================================================//
 // Constants
@@ -344,17 +349,15 @@ class Game {
     }
 }
 
-
-
+//============================================================================//
 // Main code
 async function main() {
     var all_article_titles = read_file_to_array(SCRAPE_FNAME);
     var all_word_frequencies = read_file_to_map(ALL_FREQUENCY_FNAME);
     var common_words = create_set_from_map(all_word_frequencies, FREQUENCY_CUTOFF);
 
-
-    var article_title = choose_random_article(all_article_titles);
-    article_title = "Truth"
+    //var article_title = choose_random_article(all_article_titles);
+    var article_title = all_article_titles[Math.floor(seedrandom.alea(luxon.dayString)() * all_article_titles.length)];
     var page = await get_wikipedia_page(article_title);
     var tokens = tokenize_text(page);
     tokens = apply_all_filters(tokens, article_title, common_words);
@@ -371,4 +374,22 @@ async function main() {
     //console.log(guess_order);
 }
 
-main();
+//============================================================================//
+// Exprt functions
+async function get_title_and_hints(daystring) {
+        var all_article_titles = read_file_to_array(SCRAPE_FNAME);
+        var all_word_frequencies = read_file_to_map(ALL_FREQUENCY_FNAME);
+        var common_words = create_set_from_map(all_word_frequencies, FREQUENCY_CUTOFF);
+
+        //var article_title = choose_random_article(all_article_titles);
+        var article_title = all_article_titles[Math.floor(seedrandom.alea(daystring)() * all_article_titles.length)];
+        var page = await get_wikipedia_page(article_title);
+        var tokens = tokenize_text(page);
+        tokens = apply_all_filters(tokens, article_title, common_words);
+        var freq_dist = create_frequency_map(tokens);
+        var guess_order = uncommon_ordering(freq_dist, all_word_frequencies);
+
+        return [article_title, guess_order];
+}
+
+export default get_title_and_hints;

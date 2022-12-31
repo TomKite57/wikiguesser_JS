@@ -6,6 +6,7 @@ import { useGuesses } from "./hooks/useGuesses";
 import { ButtonStyle } from './globalStyles';
 import { ToastContainer, Flip, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import get_title_and_hints from "./main.js";
 
 const Container = styled.div`
   display: flex;
@@ -83,9 +84,10 @@ const toPlaceholder = (value, answer) =>
 
 const normalise = value => value.toLowerCase().replace(/[^a-z]/g, "");
 
+var [title, hints] = get_title_and_hints(getDayString());
 
-const TEST_TITLE = "Property"
-const HINTS = ["owner", "legal", "rights", "remove", "owned", "persons", "improve", "institute", "anthropology", "template"]
+const TEST_TITLE = title;
+const HINTS = hints;
 const ATTEMPTS = 10
 
 function App() {
