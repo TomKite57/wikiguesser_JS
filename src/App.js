@@ -7,6 +7,7 @@ import { useGuesses } from "./hooks/useGuesses";
 import { ButtonStyle } from './globalStyles';
 import { ToastContainer, Flip, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import all_hints from "./full_scrape_with_frequent_words.json"
 
 const Container = styled.div`
   display: flex;
@@ -84,15 +85,23 @@ const toPlaceholder = (value, answer) =>
 
 const normalise = value => value.toLowerCase().replace(/[^a-z]/g, "");
 
+//const TEST_TITLES = ["Property"]
+//const HINTS = ["owner", "legal", "rights", "remove", "owned", "persons", "improve", "institute", "anthropology", "template"]
 
-const TEST_TITLES = ["Property"]
-const HINTS = ["owner", "legal", "rights", "remove", "owned", "persons", "improve", "institute", "anthropology", "template"]
+const TEST_TITLES = Object.keys(all_hints);
+const HINTS = Object.values(all_hints);
+const todays_ind = Math.floor(Math.random() * TEST_TITLES.length);
+
 const ATTEMPTS = 10
+
+// TODO spaces don't appear too well in the clue
+// Previous guesses don't have spaces
 
 function App() {
   const dayString = useMemo(getDayString, []);
-  const [answer, setAnswer] = useState(normalise(TEST_TITLES[Math.floor(seedrandom.alea(dayString)() * TEST_TITLES.length)]));
-  const [hints, setHints] = useState(HINTS);
+  //const todays_ind = Math.floor(seedrandom.alea(dayString)() * TEST_TITLES.length);
+  const answer = TEST_TITLES[todays_ind];
+  const hints = HINTS[todays_ind];
   const [lastHint, setLastHint] = useState("");
   const [input, setInput] = useState("");
   const [guesses, addGuess] = useGuesses(dayString);
