@@ -1,4 +1,3 @@
-import seedrandom from "seedrandom";
 import styled from "styled-components";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { Guesses } from "./components/Guesses";
@@ -92,6 +91,8 @@ const TEST_TITLES = Object.keys(all_hints);
 const HINTS = Object.values(all_hints);
 const todays_ind = Math.floor(Math.random() * TEST_TITLES.length);
 
+const TEST_TITLE = "Property"
+const HINTS = ["owner", "legal", "rights", "remove", "owned", "persons", "improve", "institute", "anthropology", "template"]
 const ATTEMPTS = 10
 
 // TODO spaces don't appear too well in the clue
@@ -99,9 +100,9 @@ const ATTEMPTS = 10
 
 function App() {
   const dayString = useMemo(getDayString, []);
-  //const todays_ind = Math.floor(seedrandom.alea(dayString)() * TEST_TITLES.length);
-  const answer = TEST_TITLES[todays_ind];
-  const hints = HINTS[todays_ind];
+  // const [bracketWord, setBracketWord] = useState(bracketWords[Math.floor(seedrandom.alea(dayString)() * bracketWords.length)]);
+  const [answer, setAnswer] = useState(normalise(TEST_TITLE));
+  const [hints, setHints] = useState(HINTS);
   const [lastHint, setLastHint] = useState("");
   const [input, setInput] = useState("");
   const [guesses, addGuess] = useGuesses(dayString);
