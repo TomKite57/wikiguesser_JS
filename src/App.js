@@ -6,7 +6,9 @@ import { useGuesses } from "./hooks/useGuesses";
 import { ButtonStyle } from './globalStyles';
 import { ToastContainer, Flip, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import get_title_and_hints from "./main.js";
+import all_hints from "./full_scrape_with_frequent_words.json"
+import seedrandom from "seedrandom";
+
 
 const Container = styled.div`
   display: flex;
@@ -80,21 +82,19 @@ const getDayString = () => {
 const toPlaceholder = (value, answer) =>
   [...value].reduce((placeholder, char) => {
     return placeholder.replace("_", char);
-  }, answer.replace(/[^\s]/g, "_"));
+  }, answer.replace(/[^\s-/]/g, "_"));
 
-const normalise = value => value.toLowerCase().replace(/[^a-z]/g, "");
+const normalise = value => value.toLowerCase().replace(/[^a-z\s-'\d/]/g, "");
 
-var [title, hints] = get_title_and_hints(getDayString());
-
-const TEST_TITLE = title;
-const HINTS = hints;
+const TITLES = Object.keys(all_hints);
 const ATTEMPTS = 10
 
 function App() {
   const dayString = useMemo(getDayString, []);
-  // const [bracketWord, setBracketWord] = useState(bracketWords[Math.floor(seedrandom.alea(dayString)() * bracketWords.length)]);
-  const [answer, setAnswer] = useState(normalise(TEST_TITLE));
-  const [hints, setHints] = useState(HINTS);
+  const todaysTitle = useMemo(() => TITLES[Math.floor(seedrandom.alea(dayString)() * TITLES.length)]);
+  console.log(TITLES.filter((title, index) => /[^a-z\s-'/]/.test(title.toLowerCase())));
+  const [answer, setAnswer] = useState(normalise(todaysTitle));
+  const [hints, setHints] = useState(all_hints[todaysTitle]);
   const [lastHint, setLastHint] = useState("");
   const [input, setInput] = useState("");
   const [guesses, addGuess] = useGuesses(dayString);
@@ -103,6 +103,7 @@ function App() {
   const inputRef = useRef(null);
 
   const handleInput = (e) => {
+    if (/[\s-/]/.test(e.target.value)) return;
     setInput(e.target.value);
   };
 
@@ -113,10 +114,10 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    if (input === "") return;
+    //if (input === "") return;
     // if (input === "" || !/^[A-Za-z]+$/.test(input)) return;
     console.log("Handle guess")
-    addGuess({word: normalise(input), hint: hints[guesses.length]});
+    addGuess({word: normalise(placeholder), hint: hints[guesses.length]});
     console.log(guesses)
     setInput("");
   }
@@ -144,7 +145,7 @@ function App() {
       return;
     }
     if (guesses.length === 10) {
-      toast(`Better luck next time! The answer is ${answer}`, {autoClose: 5000})
+      toast(`Better luck next time! The answer is ${todaysTitle}`, {autoClose: 5000})
       setEnd(true);
     }
   },[guesses]);
