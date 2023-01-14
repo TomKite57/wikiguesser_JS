@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
 import seedrandom from "seedrandom";
 
+
 const Container = styled.div`
   display: flex;
   text-align: center;
