@@ -12,19 +12,18 @@
         "stele"
     ],
     "Hatshepsut": [
-        "king",
-        "queen",
         "temple",
         "royal",
+        "mummy",
         "egypt",
         "tomb",
         "egyptian",
         "reign",
+        "dynasty",
         "pharaoh",
         "thutmose"
     ],
     "Ramesses II": [
-        "temple",
         "mummy",
         "museum",
         "statue",
@@ -33,7 +32,8 @@
         "egyptian",
         "reign",
         "pharaoh",
-        "hittite"
+        "hittite",
+        "kadesh"
     ],
     "Cyrus the Great": [
         "empire",
@@ -48,7 +48,6 @@
         "achaemenid"
     ],
     "Alexander the Great": [
-        "however",
         "victory",
         "campaign",
         "empire",
@@ -57,7 +56,8 @@
         "siege",
         "persian",
         "bc",
-        "macedonian"
+        "macedonian",
+        "macedon"
     ],
     "Ashoka": [
         "indian",
@@ -132,7 +132,6 @@
         "tem\u00fcjin"
     ],
     "Mansa Musa": [
-        "wealth",
         "arabic",
         "reign",
         "abu",
@@ -141,6 +140,7 @@
         "mali",
         "timbuktu",
         "hajj",
+        "khaldun",
         "bakr"
     ],
     "Joan of Arc": [
@@ -180,12 +180,12 @@
         "mughals"
     ],
     "Elizabeth I": [
-        "queen",
         "henry",
         "france",
         "england",
         "spanish",
         "spain",
+        "francis",
         "catholic",
         "reign",
         "protestant",
@@ -227,7 +227,7 @@
         "coalition",
         "bonaparte"
     ],
-    "Simon Bolivar": [
+    "Sim\u00f3n Bol\u00edvar": [
         "es",
         "jos\u00e9",
         "peru",
@@ -372,11 +372,11 @@
         "conversion"
     ],
     "Muhammad": [
-        "followers",
         "muslims",
         "tribes",
         "islam",
         "islamic",
+        "arabia",
         "mecca",
         "medina",
         "quran",
@@ -412,8 +412,8 @@
         "mentioned",
         "china",
         "accounts",
+        "latin",
         "khan",
-        "asia",
         "travels",
         "venice",
         "kublai",
@@ -480,7 +480,6 @@
         "hms"
     ],
     "Roald Amundsen": [
-        "south",
         "north",
         "crew",
         "pole",
@@ -488,6 +487,7 @@
         "passage",
         "expedition",
         "polar",
+        "arctic",
         "norwegian",
         "antarctic"
     ],
@@ -560,7 +560,7 @@
         "philosophy",
         "physics",
         "logic",
-        "biology",
+        "ethics",
         "plato"
     ],
     "Cicero": [
@@ -599,7 +599,7 @@
         "islamic",
         "muqaddimah"
     ],
-    "Niccolo Machiavelli": [
+    "Niccol\u00f2 Machiavelli": [
         "modern",
         "politics",
         "revolution",
@@ -611,7 +611,7 @@
         "strauss",
         "discourses"
     ],
-    "Rene Descartes": [
+    "Ren\u00e9 Descartes": [
         "knowledge",
         "method",
         "published",
@@ -756,9 +756,9 @@
         "sh\u014dshi"
     ],
     "Rumi": [
-        "turkey",
         "poetry",
         "poems",
+        "turkish",
         "iran",
         "muhammad",
         "poets",
@@ -936,8 +936,8 @@
         "salzburg"
     ],
     "Ludwig van Beethoven": [
+        "wrote",
         "began",
-        "including",
         "period",
         "piano",
         "karl",
@@ -948,13 +948,13 @@
         "bonn"
     ],
     "Louis Armstrong": [
-        "singing",
         "played",
         "band",
         "hall",
         "oliver",
         "recording",
         "jazz",
+        "blues",
         "orleans",
         "trumpet",
         "recordings"
@@ -1008,10 +1008,10 @@
         "al-dawla"
     ],
     "Shen Kuo": [
-        "wrote",
         "written",
         "chinese",
         "ancient",
+        "pool",
         "century",
         "china",
         "wang",
@@ -1248,8 +1248,8 @@
         "balancing"
     ],
     "Leonhard Euler": [
-        "theory",
         "russia",
+        "berlin",
         "academy",
         "function",
         "published",
@@ -1283,14 +1283,14 @@
         "noetherian",
         "g\u00f6ttingen"
     ],
-    "Kurt Godel": [
-        "vienna",
+    "Kurt G\u00f6del": [
         "einstein",
         "mathematics",
         "mathematical",
         "princeton",
         "consistency",
         "theorem",
+        "completeness",
         "incompleteness",
         "axiom",
         "axioms"
@@ -1416,22 +1416,22 @@
         "dynasty"
     ],
     "History of East Asia": [
-        "chinese",
         "century",
         "china",
         "period",
         "japan",
         "empire",
+        "western",
         "korea",
         "han",
         "dynasty",
         "qing"
     ],
     "History of India": [
-        "century",
         "period",
         "kingdom",
         "empire",
+        "culture",
         "dynasty",
         "bengal",
         "mughal",
@@ -1512,10 +1512,10 @@
         "bce"
     ],
     "History of art": [
-        "ancient",
         "style",
         "painting",
         "century",
+        "culture",
         "museum",
         "artists",
         "height",
@@ -1530,10 +1530,10 @@
         "developed",
         "plants",
         "wheat",
-        "crop",
         "crops",
         "farming",
-        "domesticated"
+        "domesticated",
+        "cultivation"
     ],
     "History of architecture": [
         "built",
@@ -1560,11 +1560,11 @@
         "cinema"
     ],
     "History of literature": [
-        "written",
         "chinese",
         "ancient",
         "century",
         "period",
+        "modern",
         "developed",
         "poetry",
         "fiction",
@@ -1572,11 +1572,11 @@
         "literary"
     ],
     "History of mathematics": [
-        "numbers",
         "theory",
         "century",
         "greek",
         "development",
+        "equations",
         "geometry",
         "algebra",
         "mathematicians",
@@ -1584,16 +1584,16 @@
         "numerals"
     ],
     "History of medicine": [
-        "early",
         "medical",
         "health",
         "research",
         "ancient",
         "surgery",
         "century",
-        "disease",
+        "developed",
         "hospitals",
-        "physicians"
+        "physicians",
+        "bce"
     ],
     "History of music": [
         "ancient",
@@ -1644,7 +1644,7 @@
         "bce"
     ],
     "Stone Age": [
-        "period",
+        "modern",
         "africa",
         "tools",
         "mode",
@@ -1740,13 +1740,13 @@
         "akkadian"
     ],
     "Sumer": [
-        "temple",
         "period",
         "cities",
         "bc",
         "ur",
         "sumerian",
         "mesopotamia",
+        "lagash",
         "akkadian",
         "uruk",
         "sumerians"
@@ -1788,9 +1788,9 @@
         "hellenistic"
     ],
     "Ancient Rome": [
-        "century",
         "emperor",
         "empire",
+        "italy",
         "greek",
         "ad",
         "caesar",
@@ -1944,10 +1944,10 @@
         "persian"
     ],
     "Middle Ages": [
-        "france",
         "europe",
         "century",
         "period",
+        "led",
         "empire",
         "roman",
         "western",
@@ -2088,7 +2088,6 @@
         "portuguese"
     ],
     "European colonization of the Americas": [
-        "century",
         "spain",
         "population",
         "native",
@@ -2097,6 +2096,7 @@
         "brazil",
         "portuguese",
         "peoples",
+        "colonies",
         "indigenous"
     ],
     "Western imperialism in Asia": [
@@ -2124,9 +2124,9 @@
         "castile"
     ],
     "Reformation": [
-        "england",
         "century",
         "movement",
+        "roman",
         "religious",
         "catholic",
         "luther",
@@ -2292,9 +2292,9 @@
         "axis"
     ],
     "Decolonization": [
-        "united",
         "british",
         "africa",
+        "empire",
         "countries",
         "independent",
         "nations",
@@ -2316,7 +2316,6 @@
         "soviets"
     ],
     "Green Revolution": [
-        "rice",
         "mexico",
         "production",
         "population",
@@ -2324,6 +2323,7 @@
         "wheat",
         "agriculture",
         "agricultural",
+        "fertilizer",
         "pesticides",
         "varieties"
     ],
@@ -2785,15 +2785,15 @@
     ],
     "Amazon River": [
         "brazil",
+        "length",
         "rio",
         "negro",
         "peru",
         "basin",
         "cu",
         "manaus",
-        "tributaries",
-        "ft/s",
-        "m3/s"
+        "mara\u00f1\u00f3n",
+        "tributaries"
     ],
     "Ganges": [
         "indian",
@@ -2801,11 +2801,11 @@
         "waters",
         "canal",
         "basin",
+        "bengal",
         "cu",
         "bangladesh",
-        "brahmaputra",
-        "ft/s",
-        "m3/s"
+        "bhagirathi",
+        "brahmaputra"
     ],
     "Mississippi River": [
         "channel",
@@ -2820,6 +2820,8 @@
         "basin"
     ],
     "Nile": [
+        "river",
+        "bridge",
         "lake",
         "source",
         "flow",
@@ -2827,9 +2829,7 @@
         "sudan",
         "ethiopia",
         "cu",
-        "khartoum",
-        "m3/s",
-        "ft/s"
+        "khartoum"
     ],
     "Yangtze": [
         "chinese",
@@ -2940,8 +2940,8 @@
         "lagos"
     ],
     "South Africa": [
-        "black",
         "president",
+        "state",
         "government",
         "national",
         "british",
@@ -2954,11 +2954,11 @@
     "Tanzania": [
         "national",
         "page",
-        "per",
         "africa",
         "african",
         "es",
         "cent",
+        "salaam",
         "dar",
         "zanzibar",
         "tanganyika"
@@ -2989,12 +2989,12 @@
     ],
     "India": [
         "state",
+        "system",
         "government",
         "south",
         "states",
         "century",
         "period",
-        "include",
         "economic",
         "asia",
         "bce"
@@ -3005,16 +3005,16 @@
         "population",
         "dutch",
         "largest",
-        "include",
         "java",
         "archipelago",
         "sumatra",
-        "papua"
+        "papua",
+        "gdp"
     ],
     "Iran": [
-        "leader",
         "empire",
         "population",
+        "largest",
         "republic",
         "supreme",
         "islamic",
@@ -3052,11 +3052,11 @@
         "minister",
         "states",
         "chinese",
-        "per",
         "federal",
         "species",
         "population",
         "malay",
+        "sabah",
         "sarawak"
     ],
     "Myanmar": [
@@ -3120,9 +3120,9 @@
         "seoul"
     ],
     "Taiwan": [
+        "island",
         "national",
         "chinese",
-        "per",
         "china",
         "republic",
         "mainland",
@@ -3206,14 +3206,14 @@
     "Germany": [
         "west",
         "east",
-        "states",
         "national",
         "europe",
         "federal",
         "empire",
         "berlin",
         "republic",
-        "european"
+        "european",
+        "bc"
     ],
     "Italy": [
         "national",
@@ -3253,8 +3253,8 @@
     ],
     "Spain": [
         "spanish",
+        "europe",
         "century",
-        "roman",
         "population",
         "european",
         "islands",
@@ -3277,7 +3277,7 @@
     ],
     "United Kingdom": [
         "british",
-        "per",
+        "union",
         "population",
         "britain",
         "northern",
@@ -3528,10 +3528,10 @@
         "ka'bah"
     ],
     "London": [
+        "west",
         "national",
         "england",
         "british",
-        "including",
         "royal",
         "greater",
         "centre",
@@ -3553,9 +3553,9 @@
     ],
     "Paris": [
         "french",
+        "national",
         "france",
         "century",
-        "including",
         "percent",
         "centre",
         "population",
@@ -3599,7 +3599,7 @@
         "manhattan",
         "queens"
     ],
-    "Sao Paulo": [
+    "S\u00e3o Paulo": [
         "area",
         "museum",
         "population",
@@ -3624,7 +3624,6 @@
         "architecture"
     ],
     "Art": [
-        "often",
         "form",
         "example",
         "artist",
@@ -3633,11 +3632,12 @@
         "forms",
         "skill",
         "artistic",
-        "aesthetic"
+        "aesthetic",
+        "20th"
     ],
     "Prehistoric art": [
-        "early",
         "rock",
+        "south",
         "stone",
         "period",
         "culture",
@@ -3672,35 +3672,35 @@
         "collections"
     ],
     "Abstract art": [
-        "color",
         "painting",
         "century",
         "artists",
         "paintings",
         "visual",
         "islamic",
+        "piet",
         "abstraction",
         "kandinsky",
         "mondrian"
     ],
     "Modernism": [
         "works",
-        "often",
+        "major",
         "art",
         "began",
         "painting",
         "century",
-        "including",
         "modern",
         "movement",
-        "artists"
+        "artists",
+        "abstract"
     ],
     "Realism": [
+        "political",
         "international",
         "movement",
         "arts",
         "album",
-        "include",
         "relations",
         "philosophy",
         "realistic",
@@ -3708,7 +3708,6 @@
         "neorealism"
     ],
     "Romanticism": [
-        "often",
         "french",
         "art",
         "nature",
@@ -3717,7 +3716,8 @@
         "century",
         "period",
         "movement",
-        "literature"
+        "literature",
+        "byron"
     ],
     "Architecture": [
         "ancient",
@@ -3828,7 +3828,6 @@
         "folktales"
     ],
     "Poetry": [
-        "forms",
         "poem",
         "rhythm",
         "meter",
@@ -3837,6 +3836,7 @@
         "epic",
         "verse",
         "rhyme",
+        "prose",
         "syllables"
     ],
     "Epic poetry": [
@@ -3852,7 +3852,6 @@
         "narrative"
     ],
     "Music": [
-        "often",
         "century",
         "songs",
         "popular",
@@ -3861,6 +3860,7 @@
         "melody",
         "instruments",
         "classical",
+        "musicians",
         "composers"
     ],
     "Musical instrument": [
@@ -3902,9 +3902,9 @@
     "Classical music": [
         "period",
         "western",
-        "include",
         "era",
         "included",
+        "orchestra",
         "instruments",
         "medieval",
         "mozart",
@@ -3912,7 +3912,7 @@
         "composers"
     ],
     "Folk music": [
-        "often",
+        "american",
         "national",
         "century",
         "songs",
@@ -3948,12 +3948,12 @@
         "1960s"
     ],
     "Rock music": [
-        "pop",
         "british",
-        "including",
+        "success",
         "metal",
         "punk",
         "acts",
+        "album",
         "blues",
         "bands",
         "mainstream",
@@ -4082,9 +4082,9 @@
     "Design": [
         "based",
         "education",
+        "object",
         "product",
         "development",
-        "include",
         "perspective",
         "rational",
         "designers",
@@ -4154,9 +4154,9 @@
     "Philosophy": [
         "knowledge",
         "modern",
+        "western",
         "developed",
         "schools",
-        "include",
         "ethics",
         "traditions",
         "buddhist",
@@ -4200,19 +4200,18 @@
         "epistemological"
     ],
     "Knowledge": [
+        "person",
         "reason",
-        "often",
         "experience",
         "form",
-        "however",
         "example",
         "forms",
         "belief",
         "justified",
-        "justification"
+        "justification",
+        "epistemology"
     ],
     "Belief": [
-        "often",
         "example",
         "view",
         "knowledge",
@@ -4221,6 +4220,7 @@
         "behavior",
         "religion",
         "religious",
+        "proposition",
         "religions"
     ],
     "Reason": [
@@ -4260,7 +4260,7 @@
         "utilitarianism"
     ],
     "Good and evil": [
-        "however",
+        "sense",
         "nature",
         "view",
         "goodness",
@@ -4344,13 +4344,13 @@
         "confucian"
     ],
     "Western philosophy": [
-        "based",
         "theory",
         "century",
         "modern",
         "logic",
         "argued",
         "continental",
+        "philosophical",
         "philosophers",
         "metaphysics",
         "analytic"
@@ -4382,12 +4382,12 @@
     "Religion": [
         "culture",
         "sacred",
-        "include",
         "belief",
         "beliefs",
         "islam",
         "christianity",
         "practices",
+        "mythology",
         "buddhism",
         "judaism"
     ],
@@ -4404,23 +4404,23 @@
         "reincarnation"
     ],
     "Deity": [
-        "roman",
         "religion",
         "beings",
         "greek",
         "goddess",
         "supreme",
         "religions",
+        "inca",
         "deva",
         "deities",
         "bce"
     ],
     "God": [
+        "human",
         "names",
         "faith",
         "universe",
         "view",
-        "humans",
         "existence",
         "worship",
         "creator",
@@ -4560,7 +4560,6 @@
         "canon"
     ],
     "Catholic Church": [
-        "century",
         "rome",
         "council",
         "roman",
@@ -4568,6 +4567,7 @@
         "latin",
         "eastern",
         "vatican",
+        "rite",
         "canon",
         "bishops"
     ],
@@ -4608,11 +4608,11 @@
         "hadith"
     ],
     "Shia Islam": [
-        "belief",
         "muslim",
         "muslims",
         "muhammad",
         "eid",
+        "imams",
         "bint",
         "imamate",
         "sh\u012b\u02bf\u012bte",
@@ -4692,9 +4692,9 @@
         "kami"
     ],
     "Taoism": [
-        "century",
         "china",
         "religion",
+        "religious",
         "philosophy",
         "texts",
         "ching",
@@ -4704,7 +4704,6 @@
         "zhuangzi"
     ],
     "Buddhism": [
-        "practice",
         "path",
         "india",
         "various",
@@ -4713,6 +4712,7 @@
         "traditions",
         "meditation",
         "rebirth",
+        "sanskrit",
         "mah\u0101y\u0101na"
     ],
     "Mahayana": [
@@ -4776,8 +4776,8 @@
         "arjuna"
     ],
     "Jainism": [
-        "temple",
         "india",
+        "beings",
         "texts",
         "monks",
         "temples",
@@ -4824,10 +4824,10 @@
         "garments"
     ],
     "Home": [
-        "often",
         "century",
         "humans",
         "section",
+        "structure",
         "concept",
         "residence",
         "housing",
@@ -4897,7 +4897,6 @@
     ],
     "Adolescence": [
         "brain",
-        "often",
         "social",
         "changes",
         "sexual",
@@ -4905,7 +4904,8 @@
         "relationships",
         "development",
         "peers",
-        "puberty"
+        "puberty",
+        "cognitive"
     ],
     "Child": [
         "early",
@@ -4945,8 +4945,8 @@
     ],
     "Old age": [
         "less",
-        "often",
         "study",
+        "states",
         "united",
         "social",
         "senior",
@@ -4992,7 +4992,7 @@
         "reproductive"
     ],
     "Sexual intercourse": [
-        "often",
+        "health",
         "female",
         "rape",
         "activity",
@@ -5064,13 +5064,13 @@
         "frying"
     ],
     "Food": [
+        "animals",
         "nuts",
         "humans",
         "plant",
         "source",
         "fruit",
         "plants",
-        "include",
         "vegetables",
         "seeds",
         "fruits"
@@ -5100,11 +5100,11 @@
         "oats"
     ],
     "Wheat": [
+        "disease",
         "species",
         "production",
         "resistance",
         "grain",
-        "crop",
         "protein",
         "breeding",
         "tonnes",
@@ -5113,25 +5113,25 @@
     ],
     "Maize": [
         "ears",
+        "grown",
         "plant",
         "mexico",
         "production",
         "plants",
         "corn",
         "grain",
-        "crop",
         "teosinte",
         "kernels"
     ],
     "Rice": [
+        "white",
         "million",
         "brown",
-        "per",
         "india",
         "production",
         "countries",
+        "soil",
         "tons",
-        "crop",
         "pest",
         "varieties"
     ],
@@ -5148,9 +5148,9 @@
         "rennet"
     ],
     "Fruit": [
-        "including",
         "plant",
         "flower",
+        "produce",
         "seed",
         "seeds",
         "berry",
@@ -5166,16 +5166,16 @@
         "pigs",
         "muscle",
         "cattle",
-        "include",
         "protein",
         "processed",
-        "consumption"
+        "consumption",
+        "livestock"
     ],
     "Salt": [
         "sea",
         "taste",
         "health",
-        "per",
+        "disease",
         "production",
         "added",
         "foods",
@@ -5196,7 +5196,6 @@
         "herbs"
     ],
     "Sugar": [
-        "brown",
         "century",
         "production",
         "cane",
@@ -5205,6 +5204,7 @@
         "beet",
         "sugarcane",
         "fructose",
+        "monosaccharides",
         "sucrose"
     ],
     "Vegetable": [
@@ -5234,8 +5234,8 @@
     "Soybean": [
         "raw",
         "products",
+        "seed",
         "seeds",
-        "crop",
         "protein",
         "flour",
         "foods",
@@ -5280,14 +5280,14 @@
         "arabica"
     ],
     "Drinking water": [
-        "per",
-        "source",
+        "access",
         "treatment",
         "billion",
         "quality",
+        "supply",
         "countries",
-        "include",
         "sources",
+        "standards",
         "improved",
         "sanitation"
     ],
@@ -5340,15 +5340,15 @@
         "benefits"
     ],
     "Game": [
-        "rules",
         "board",
         "played",
         "video",
         "cards",
         "player",
+        "sports",
         "players",
-        "include",
         "elements",
+        "chess",
         "dice"
     ],
     "Board game": [
@@ -5364,7 +5364,6 @@
         "e.g"
     ],
     "Card game": [
-        "often",
         "rules",
         "played",
         "player",
@@ -5373,7 +5372,8 @@
         "players",
         "dealer",
         "poker",
-        "decks"
+        "decks",
+        "tarot"
     ],
     "Gambling": [
         "played",
@@ -5391,22 +5391,22 @@
         "media",
         "industry",
         "development",
-        "include",
         "display",
         "electronic",
         "hardware",
         "console",
         "arcade",
-        "gaming"
+        "gaming",
+        "gameplay"
     ],
     "Sport": [
         "professional",
         "competition",
-        "including",
         "physical",
         "international",
         "events",
         "association",
+        "competitive",
         "olympic",
         "participation",
         "participants"
@@ -5448,13 +5448,13 @@
         "ioc"
     ],
     "Toy": [
+        "children",
         "child",
-        "often",
+        "needed",
         "games",
         "example",
         "popular",
         "development",
-        "include",
         "dolls",
         "gender",
         "puzzles"
@@ -5488,8 +5488,8 @@
         "local",
         "travel",
         "united",
-        "including",
         "international",
+        "services",
         "industry",
         "cultural",
         "sustainable",
@@ -5520,9 +5520,9 @@
         "folklorists"
     ],
     "Festival": [
-        "often",
         "local",
         "national",
+        "example",
         "ancient",
         "century",
         "events",
@@ -5582,7 +5582,7 @@
     "Power (social and political)": [
         "needed",
         "group",
-        "often",
+        "relationship",
         "powerful",
         "theory",
         "authority",
@@ -5606,13 +5606,13 @@
     "Communication": [
         "message",
         "whether",
-        "often",
         "form",
         "language",
         "example",
         "behavior",
         "messages",
         "forms",
+        "receiver",
         "non-verbal"
     ],
     "Social science": [
@@ -5640,13 +5640,13 @@
         "anthropological"
     ],
     "Sociology": [
-        "science",
         "society",
         "research",
         "social",
         "theory",
         "analysis",
         "cultural",
+        "weber",
         "sociological",
         "durkheim",
         "sociologists"
@@ -5665,7 +5665,6 @@
     ],
     "Political party": [
         "government",
-        "often",
         "leader",
         "example",
         "members",
@@ -5673,19 +5672,20 @@
         "systems",
         "countries",
         "democratic",
-        "elections"
+        "elections",
+        "candidates"
     ],
     "Political science": [
-        "research",
         "social",
         "theory",
-        "including",
         "international",
         "policy",
         "scientists",
+        "analysis",
         "discipline",
         "philosophy",
-        "methods"
+        "methods",
+        "crises"
     ],
     "Colonialism": [
         "india",
@@ -5772,7 +5772,6 @@
         "ideologies"
     ],
     "Anarchism": [
-        "society",
         "social",
         "century",
         "political",
@@ -5781,6 +5780,7 @@
         "movement",
         "revolution",
         "schools",
+        "socialist",
         "contemporary"
     ],
     "Capitalism": [
@@ -5892,24 +5892,24 @@
         "bc"
     ],
     "Military": [
-        "forces",
-        "intelligence",
         "technology",
         "armed",
         "development",
         "combat",
+        "operations",
         "personnel",
         "sources",
         "tactics",
+        "operational",
         "warfare"
     ],
     "European Union": [
         "states",
         "member",
-        "per",
         "council",
         "policy",
         "countries",
+        "commission",
         "development",
         "cent",
         "treaty",
@@ -6012,6 +6012,7 @@
         "secondary"
     ],
     "School": [
+        "united",
         "students",
         "india",
         "education",
@@ -6019,7 +6020,6 @@
         "online",
         "classes",
         "countries",
-        "include",
         "primary",
         "secondary"
     ],
@@ -6075,10 +6075,10 @@
         "chief",
         "public",
         "board",
+        "planning",
         "financial",
         "organization",
         "employees",
-        "include",
         "administration",
         "organizations",
         "managers"
@@ -6120,7 +6120,6 @@
         "employers"
     ],
     "Economics": [
-        "production",
         "capital",
         "demand",
         "supply",
@@ -6129,6 +6128,7 @@
         "economy",
         "income",
         "unemployment",
+        "quantity",
         "output"
     ],
     "Trade": [
@@ -6168,7 +6168,6 @@
         "economics"
     ],
     "Finance": [
-        "credit",
         "theory",
         "stock",
         "capital",
@@ -6177,6 +6176,7 @@
         "investment",
         "corporate",
         "trading",
+        "asset",
         "quantitative"
     ],
     "Bank": [
@@ -6204,7 +6204,7 @@
         "monetary"
     ],
     "Insurance": [
-        "claims",
+        "policy",
         "companies",
         "risks",
         "losses",
@@ -6240,12 +6240,12 @@
         "economics"
     ],
     "Agriculture": [
-        "production",
         "countries",
         "global",
         "soil",
+        "farmers",
         "products",
-        "crop",
+        "breeding",
         "crops",
         "farming",
         "livestock",
@@ -6264,7 +6264,7 @@
         "output"
     ],
     "Construction": [
-        "united",
+        "owner",
         "site",
         "workers",
         "design",
@@ -6420,7 +6420,6 @@
         "equality"
     ],
     "Globalization": [
-        "social",
         "trade",
         "political",
         "international",
@@ -6429,7 +6428,8 @@
         "global",
         "economic",
         "growth",
-        "cultural"
+        "cultural",
+        "developing"
     ],
     "Human migration": [
         "forced",
@@ -6531,9 +6531,9 @@
         "less",
         "bank",
         "energy",
+        "health",
         "social",
         "access",
-        "per",
         "countries",
         "population",
         "income",
@@ -6708,12 +6708,12 @@
         "humorous"
     ],
     "Love": [
-        "often",
         "romantic",
         "sexual",
         "desire",
         "loving",
         "considered",
+        "passion",
         "greek",
         "refers",
         "eros",
@@ -6732,8 +6732,8 @@
         "cognitive"
     ],
     "Consciousness": [
+        "brain",
         "experience",
-        "however",
         "states",
         "humans",
         "behavior",
@@ -6810,8 +6810,8 @@
         "knowledge",
         "behavior",
         "response",
-        "environment",
         "plants",
+        "development",
         "conditioning",
         "stimulus"
     ],
@@ -7016,22 +7016,22 @@
         "grammatical"
     ],
     "Word": [
-        "language",
         "example",
         "meaning",
         "forms",
         "languages",
         "boundaries",
         "linguistics",
+        "suffix",
         "morphemes",
         "grammatical",
         "phonological"
     ],
     "Personal name": [
-        "given",
         "system",
         "usually",
         "western",
+        "countries",
         "eastern",
         "cultures",
         "naming",
@@ -7136,8 +7136,8 @@
         "cyrillic"
     ],
     "Arabic numerals": [
-        "europe",
         "century",
+        "roman",
         "systems",
         "western",
         "introduced",
@@ -7160,8 +7160,8 @@
         "simplified"
     ],
     "Mass media": [
+        "radio",
         "public",
-        "often",
         "form",
         "video",
         "games",
@@ -7196,10 +7196,10 @@
         "agencies"
     ],
     "Publishing": [
-        "process",
         "online",
         "industry",
         "newspapers",
+        "content",
         "distribution",
         "printing",
         "publisher",
@@ -7414,9 +7414,9 @@
     "Mental disorder": [
         "health",
         "social",
-        "including",
         "personality",
         "illness",
+        "symptoms",
         "depression",
         "anxiety",
         "diagnosis",
@@ -7528,7 +7528,7 @@
         "services",
         "mental",
         "stress",
-        "include",
+        "individual",
         "diseases"
     ],
     "Mental health": [
@@ -7592,7 +7592,6 @@
         "bmi"
     ],
     "Drug": [
-        "legal",
         "chemical",
         "medication",
         "designer",
@@ -7601,6 +7600,7 @@
         "substances",
         "recreational",
         "classification",
+        "atc",
         "psychoactive"
     ],
     "Medication": [
@@ -7784,7 +7784,7 @@
         "spacetime"
     ],
     "Solar System": [
-        "billion",
+        "cloud",
         "inner",
         "planets",
         "objects",
@@ -7916,8 +7916,8 @@
         "uranus"
     ],
     "Asteroid": [
-        "surface",
         "belt",
+        "impact",
         "largest",
         "planets",
         "objects",
@@ -7988,7 +7988,6 @@
         "galactic"
     ],
     "Natural satellite": [
-        "moon",
         "solar",
         "planets",
         "objects",
@@ -7996,6 +7995,7 @@
         "dwarf",
         "saturn",
         "moons",
+        "orbiting",
         "orbits",
         "triton"
     ],
@@ -8036,19 +8036,18 @@
         "cosmologists"
     ],
     "Planet": [
-        "mass",
         "solar",
         "objects",
         "orbit",
         "venus",
         "jupiter",
         "mercury",
+        "saturn",
         "neptune",
         "pluto",
         "planetary"
     ],
     "Star": [
-        "massive",
         "temperature",
         "core",
         "sequence",
@@ -8057,6 +8056,7 @@
         "helium",
         "magnitude",
         "stellar",
+        "luminosity",
         "m\u2609"
     ],
     "Supernova": [
@@ -8169,12 +8169,12 @@
     ],
     "Motion": [
         "speed",
-        "per",
         "object",
         "laws",
         "frame",
         "objects",
         "reference",
+        "particles",
         "newton",
         "mechanics",
         "velocity"
@@ -8192,7 +8192,6 @@
         "momentum"
     ],
     "Force": [
-        "mass",
         "object",
         "motion",
         "constant",
@@ -8201,6 +8200,7 @@
         "newton",
         "velocity",
         "momentum",
+        "friction",
         "acceleration"
     ],
     "Electromagnetism": [
@@ -8336,13 +8336,13 @@
         "hadrons"
     ],
     "Electron": [
-        "energy",
         "charged",
         "spin",
         "radiation",
         "magnetic",
         "particles",
         "quantum",
+        "rays",
         "atom",
         "particle",
         "atoms"
@@ -8482,10 +8482,10 @@
     "Speed of light": [
         "distance",
         "theory",
-        "per",
         "value",
         "waves",
         "constant",
+        "frequency",
         "vacuum",
         "velocity",
         "electromagnetic",
@@ -8564,7 +8564,6 @@
         "vibrations"
     ],
     "Biology": [
-        "process",
         "dna",
         "species",
         "cells",
@@ -8572,6 +8571,7 @@
         "carbon",
         "genes",
         "bacteria",
+        "molecules",
         "organisms",
         "archaea"
     ],
@@ -8612,12 +8612,12 @@
         "cessation"
     ],
     "Suicide": [
-        "common",
         "due",
         "rate",
         "mental",
         "countries",
         "attempted",
+        "disorder",
         "attempts",
         "rates",
         "factors",
@@ -8720,12 +8720,12 @@
         "archaea"
     ],
     "Animal": [
-        "including",
+        "early",
+        "form",
         "species",
         "cells",
         "groups",
         "development",
-        "include",
         "sponges",
         "protostomes",
         "bilateria",
@@ -8833,14 +8833,14 @@
         "large",
         "size",
         "example",
-        "including",
         "humans",
         "species",
         "fur",
+        "females",
         "mammalian"
     ],
     "Cat": [
-        "often",
+        "usually",
         "female",
         "male",
         "humans",
@@ -8900,15 +8900,15 @@
         "sus"
     ],
     "Primate": [
+        "common",
         "social",
-        "including",
         "humans",
         "monkey",
         "species",
         "groups",
-        "include",
         "monkeys",
         "apes",
+        "mammals",
         "lemurs"
     ],
     "Human": [
@@ -8924,7 +8924,7 @@
         "sapiens"
     ],
     "Rodent": [
-        "including",
+        "female",
         "rat",
         "species",
         "rats",
@@ -8960,13 +8960,13 @@
         "bivalves"
     ],
     "Reptile": [
-        "animals",
         "birds",
         "snake",
         "species",
         "groups",
         "turtles",
         "snakes",
+        "dinosaurs",
         "mammals",
         "crocodiles",
         "lizards"
@@ -8984,14 +8984,14 @@
         "theropods"
     ],
     "Plant": [
-        "often",
         "green",
         "animals",
         "species",
         "groups",
-        "include",
+        "roots",
         "growth",
         "algae",
+        "vascular",
         "fungi",
         "photosynthesis"
     ],
@@ -9020,8 +9020,8 @@
         "organisms"
     ],
     "Flower": [
-        "parts",
         "plant",
+        "fruit",
         "species",
         "plants",
         "seeds",
@@ -9033,10 +9033,10 @@
     ],
     "Seed": [
         "plant",
-        "fruit",
         "conditions",
         "plants",
         "outer",
+        "growth",
         "embryo",
         "ovule",
         "endosperm",
@@ -9060,10 +9060,10 @@
         "sexual",
         "species",
         "plants",
-        "include",
         "mushrooms",
         "structures",
         "organisms",
+        "reproduction",
         "spores",
         "hyphae"
     ],
@@ -9128,7 +9128,7 @@
         "hemoglobin"
     ],
     "Heart": [
-        "disease",
+        "muscle",
         "artery",
         "valve",
         "cardiac",
@@ -9368,11 +9368,11 @@
         "transcription"
     ],
     "Gene": [
-        "sequence",
         "definition",
         "protein",
         "organism",
         "regions",
+        "organisms",
         "chromosome",
         "regulatory",
         "transcription",
@@ -9416,9 +9416,9 @@
         "amino"
     ],
     "Molecular biology": [
-        "technique",
         "genetic",
         "methods",
+        "sequence",
         "protein",
         "gel",
         "genetics",
@@ -9440,12 +9440,12 @@
         "endocrine"
     ],
     "Protein": [
-        "chemical",
         "structure",
         "acid",
         "sequence",
         "structures",
         "molecules",
+        "molecular",
         "acids",
         "enzymes",
         "amino",
@@ -9525,20 +9525,20 @@
     ],
     "Taxonomy": [
         "research",
+        "based",
         "data",
         "specific",
         "standard",
         "scientific",
         "structure",
-        "include",
         "biology",
         "classification",
         "taxonomies"
     ],
     "Species": [
-        "concept",
         "genetic",
         "biological",
+        "isolation",
         "distinct",
         "organisms",
         "concepts",
@@ -9572,10 +9572,10 @@
         "amino"
     ],
     "Inorganic chemistry": [
-        "theory",
         "metal",
         "species",
         "elements",
+        "transition",
         "electron",
         "compounds",
         "complexes",
@@ -9644,19 +9644,19 @@
         "alumina"
     ],
     "Carbon": [
-        "diamonds",
         "oxygen",
         "forms",
         "element",
         "organic",
         "bonds",
+        "hydrogen",
         "atoms",
         "compounds",
         "graphite",
         "allotropes"
     ],
     "Copper": [
-        "silver",
+        "iron",
         "metal",
         "electrical",
         "bronze",
@@ -9668,12 +9668,12 @@
         "alloys"
     ],
     "Gold": [
-        "form",
         "silver",
-        "per",
         "metal",
         "acid",
         "au",
+        "ounce",
+        "deposits",
         "bc",
         "metals",
         "compounds",
@@ -9692,7 +9692,6 @@
         "h2"
     ],
     "Iron": [
-        "cast",
         "steel",
         "oxygen",
         "stable",
@@ -9701,6 +9700,7 @@
         "compounds",
         "oxide",
         "complexes",
+        "h2o",
         "oxidation"
     ],
     "Nitrogen": [
@@ -9722,13 +9722,12 @@
         "produced",
         "liquid",
         "element",
-        "hydrogen",
+        "organisms",
         "compounds",
         "combustion",
         "o2"
     ],
     "Phosphorus": [
-        "process",
         "production",
         "acid",
         "element",
@@ -9736,6 +9735,7 @@
         "salts",
         "compounds",
         "phosphate",
+        "\u00b0c",
         "p4",
         "phosphates"
     ],
@@ -9752,9 +9752,9 @@
         "\u00b0c"
     ],
     "Silver": [
-        "stable",
         "copper",
         "metals",
+        "electron",
         "compounds",
         "nitrate",
         "ag",
@@ -9800,13 +9800,13 @@
         "\u00b0c"
     ],
     "Carbon dioxide": [
-        "ocean",
         "atmosphere",
         "oxygen",
         "acid",
         "concentration",
         "co",
         "concentrations",
+        "carbonate",
         "\u00b0c",
         "ppm",
         "co2"
@@ -9847,7 +9847,7 @@
         "synthesis",
         "oxidation"
     ],
-    "Acid-base reaction": [
+    "Acid\u2013base reaction": [
         "acid",
         "definition",
         "hydrogen",
@@ -9896,7 +9896,6 @@
         "alloys"
     ],
     "Alloy": [
-        "strength",
         "iron",
         "metal",
         "steel",
@@ -9905,7 +9904,8 @@
         "carbon",
         "properties",
         "atoms",
-        "metals"
+        "metals",
+        "aluminium"
     ],
     "Bronze": [
         "iron",
@@ -9920,8 +9920,8 @@
         "bce"
     ],
     "Steel": [
-        "iron",
         "modern",
+        "metal",
         "cast",
         "production",
         "structure",
@@ -10052,10 +10052,10 @@
         "cumulus"
     ],
     "Rain": [
+        "dry",
         "weather",
         "season",
         "wet",
-        "per",
         "average",
         "areas",
         "climate",
@@ -10148,11 +10148,11 @@
         "glacial"
     ],
     "Mineral": [
+        "specific",
         "crystal",
         "oxygen",
         "chemical",
         "structure",
-        "include",
         "elements",
         "coordination",
         "cleavage",
@@ -10163,7 +10163,7 @@
         "motion",
         "spreading",
         "magnetic",
-        "boundaries",
+        "drift",
         "crust",
         "continental",
         "continents",
@@ -10196,7 +10196,6 @@
         "humus"
     ],
     "Volcano": [
-        "activity",
         "mount",
         "ash",
         "formed",
@@ -10205,22 +10204,23 @@
         "gases",
         "eruption",
         "magma",
-        "eruptions"
+        "eruptions",
+        "volcanism"
     ],
     "Technology": [
+        "ancient",
         "knowledge",
-        "including",
+        "humans",
         "revolution",
         "scientific",
         "tools",
-        "include",
         "ethics",
         "technologies",
         "technological",
         "bce"
     ],
     "Engineering": [
-        "century",
+        "knowledge",
         "design",
         "civil",
         "systems",
@@ -10304,9 +10304,9 @@
         "decomposition"
     ],
     "Gunpowder": [
-        "century",
         "powder",
         "cannon",
+        "firearms",
         "charcoal",
         "potassium",
         "grains",
@@ -10342,14 +10342,14 @@
     "Natural gas": [
         "united",
         "oil",
-        "per",
         "production",
         "fuel",
         "wells",
         "carbon",
         "methane",
         "cubic",
-        "shale"
+        "shale",
+        "pipelines"
     ],
     "Petroleum": [
         "united",
@@ -10388,8 +10388,8 @@
         "biomass"
     ],
     "Hydropower": [
+        "energy",
         "century",
-        "per",
         "generation",
         "electricity",
         "flow",
@@ -10424,7 +10424,7 @@
         "renewable"
     ],
     "Animal husbandry": [
-        "farm",
+        "raised",
         "production",
         "sheep",
         "pigs",
@@ -10436,13 +10436,13 @@
         "domesticated"
     ],
     "Domestication": [
+        "animal",
         "humans",
         "plant",
         "species",
         "plants",
         "domestic",
         "selection",
-        "crop",
         "crops",
         "traits",
         "domesticated"
@@ -10487,8 +10487,8 @@
         "process",
         "fruit",
         "method",
-        "include",
         "methods",
+        "boiling",
         "bacteria",
         "preserved",
         "preserves",
@@ -10508,7 +10508,6 @@
         "gardeners"
     ],
     "Medical imaging": [
-        "radiation",
         "technique",
         "tissue",
         "magnetic",
@@ -10517,6 +10516,7 @@
         "ct",
         "mri",
         "ultrasound",
+        "x-ray",
         "tomography"
     ],
     "Refrigeration": [
@@ -10568,8 +10568,8 @@
         "infantry"
     ],
     "Bow and arrow": [
-        "draw",
         "wood",
+        "modern",
         "hunting",
         "string",
         "archer",
@@ -10724,9 +10724,9 @@
         "motors"
     ],
     "Printing": [
-        "century",
         "image",
         "print",
+        "areas",
         "ink",
         "digital",
         "printed",
@@ -10820,22 +10820,22 @@
         "smartphones"
     ],
     "Video": [
-        "per",
         "image",
         "television",
         "frame",
         "display",
         "digital",
+        "aspect",
         "ratio",
         "sony",
         "analog",
         "formats"
     ],
     "Television": [
-        "image",
         "internet",
         "systems",
         "sets",
+        "images",
         "tube",
         "display",
         "broadcast",
@@ -10844,11 +10844,11 @@
         "programming"
     ],
     "Computer science": [
-        "data",
         "design",
         "systems",
         "engineering",
         "software",
+        "processing",
         "programming",
         "mathematical",
         "computing",
@@ -10856,13 +10856,13 @@
         "computational"
     ],
     "Computer": [
-        "data",
         "modern",
         "instructions",
         "electronic",
         "software",
         "digital",
         "devices",
+        "languages",
         "programs",
         "integrated",
         "computing"
@@ -10928,7 +10928,6 @@
         "semiconductor"
     ],
     "Semiconductor device": [
-        "crystal",
         "holes",
         "electric",
         "circuits",
@@ -10936,6 +10935,7 @@
         "silicon",
         "electrons",
         "transistor",
+        "field-effect",
         "mosfet",
         "diode"
     ],
@@ -10985,10 +10985,9 @@
         "spacecraft",
         "satellites",
         "orbital",
-        "crewed"
+        "uncrewed"
     ],
     "Space station": [
-        "international",
         "launched",
         "nasa",
         "spacecraft",
@@ -10996,6 +10995,7 @@
         "orbital",
         "mir",
         "iss",
+        "skylab",
         "2022-08-26",
         "salyut"
     ],
@@ -11012,13 +11012,13 @@
         "modes"
     ],
     "Aircraft": [
-        "lift",
         "wings",
         "wing",
         "jet",
         "types",
         "fastest",
         "powered",
+        "mach",
         "mph",
         "km/h",
         "fixed-wing"
@@ -11036,16 +11036,16 @@
         "cyclists"
     ],
     "Car": [
+        "vehicle",
         "production",
         "fuel",
-        "systems",
         "electric",
+        "motor",
         "ford",
-        "include",
         "controls",
         "vehicles",
         "benz",
-        "combustion"
+        "daimler"
     ],
     "Rail transport": [
         "track",
@@ -11192,7 +11192,6 @@
         "panama"
     ],
     "Dam": [
-        "often",
         "river",
         "built",
         "large",
@@ -11201,7 +11200,8 @@
         "structure",
         "gravity",
         "arch",
-        "reservoir"
+        "reservoir",
+        "downstream"
     ],
     "Road": [
         "surface",
@@ -11252,11 +11252,11 @@
         "veneer"
     ],
     "Metallurgy": [
-        "iron",
         "metal",
         "material",
         "production",
         "copper",
+        "applications",
         "bc",
         "processes",
         "metals",
@@ -11288,8 +11288,8 @@
         "pulping"
     ],
     "Plastic": [
+        "production",
         "global",
-        "chemical",
         "products",
         "materials",
         "recycling",
@@ -11336,13 +11336,13 @@
         "quercus"
     ],
     "Camera": [
-        "capture",
         "images",
         "photography",
         "digital",
         "shutter",
         "exposure",
         "lens",
+        "focusing",
         "lenses",
         "reflex",
         "aperture"
@@ -11384,9 +11384,9 @@
         "optical"
     ],
     "Telescope": [
-        "radiation",
         "mirrors",
         "electromagnetic",
+        "lenses",
         "astronomy",
         "observatory",
         "optical",
@@ -11396,12 +11396,12 @@
         "x-ray"
     ],
     "Mathematics": [
-        "numbers",
         "example",
         "proof",
         "theory",
         "century",
         "areas",
+        "analysis",
         "objects",
         "geometry",
         "algebra",
@@ -11420,13 +11420,13 @@
         "euclid"
     ],
     "Mathematical proof": [
-        "language",
-        "example",
         "theory",
         "statement",
         "odd",
         "data",
+        "argument",
         "formal",
+        "statements",
         "statistical",
         "induction",
         "theorem"
@@ -11475,8 +11475,8 @@
         "negative",
         "complex",
         "rational",
-        "digits",
         "decimal",
+        "integers",
         "numeral"
     ],
     "Real number": [
@@ -11617,12 +11617,12 @@
         "structures"
     ],
     "Mathematical analysis": [
-        "numbers",
         "theory",
         "century",
         "complex",
         "developed",
         "measure",
+        "sequence",
         "functions",
         "equations",
         "calculus",
@@ -11666,13 +11666,13 @@
     ],
     "Series": [
         "science",
-        "including",
         "television",
         "media",
         "arts",
         "entertainment",
         "sequence",
         "mathematics",
+        "rover",
         "seriation",
         "serialism"
     ],
@@ -11725,7 +11725,7 @@
         "cube"
     ],
     "Geometry": [
-        "theory",
+        "points",
         "century",
         "complex",
         "mathematics",
@@ -11749,8 +11749,8 @@
         "radians"
     ],
     "Trigonometry": [
-        "angle",
         "function",
+        "tables",
         "triangle",
         "functions",
         "angles",
@@ -11769,7 +11769,7 @@
         "perimeter",
         "triangle",
         "rectangle",
-        "a=",
+        "parallelogram",
         "polygon"
     ],
     "Conic section": [
@@ -11809,6 +11809,7 @@
         "products"
     ],
     "Polygon": [
+        "star",
         "plane",
         "regular",
         "sin",
@@ -11817,10 +11818,10 @@
         "interior",
         "angles",
         "boundary",
-        "i+1",
         "vertices"
     ],
     "Triangle": [
+        "sin",
         "opposite",
         "sides",
         "equal",
@@ -11829,16 +11830,15 @@
         "angles",
         "lengths",
         "theorem",
-        "t=",
         "vertices"
     ],
     "Three-dimensional space": [
-        "field",
         "plane",
         "lines",
         "surface",
         "product",
         "coordinates",
+        "coordinate",
         "geometry",
         "vector",
         "integral",
@@ -11858,12 +11858,12 @@
     ],
     "Topology": [
         "sets",
+        "function",
+        "properties",
         "spaces",
         "continuous",
         "geometric",
         "metric",
-        "homeomorphism",
-        "homotopy",
         "manifolds",
         "algebraic",
         "topological"
