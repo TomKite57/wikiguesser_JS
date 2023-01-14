@@ -113,7 +113,7 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    if (input === "") return;
+    //if (input === "") return;
     // if (input === "" || !/^[A-Za-z]+$/.test(input)) return;
     console.log("Handle guess")
     addGuess({word: normalise(placeholder), hint: hints[guesses.length]});
