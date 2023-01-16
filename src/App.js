@@ -4,6 +4,7 @@ import { Guesses } from "./components/Guesses";
 import { DateTime } from "luxon";
 import { useGuesses } from "./hooks/useGuesses";
 import { ButtonStyle } from './globalStyles';
+import { HowToModal } from './components/HowToModal';
 import { ToastContainer, Flip, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
@@ -155,6 +156,8 @@ function App() {
         autoClose={false}
       />
       <Title>Wikiguesser</Title>
+      <HowToModal>
+      </HowToModal>
       <InputArea>
         <HiddenInput
           ref={inputRef}
