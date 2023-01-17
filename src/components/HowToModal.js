@@ -17,15 +17,12 @@ const StyledBox = styled(Box)`
   max-width: 350px;
   max-height: 400px;
   overflow: auto;
-  background-color: gray;
+  background-color: var(--secondary-background);
+  color: var(--primary-text);
   border: 2px solid gray;
   box-shadow: 24rem;
   padding: 2em;
   justify-content: flex-start;
-  @media (prefers-color-scheme: dark) {
-    background-color: #121212;
-    color: white;
-  }
 `;
 
 const Button = styled.button`
@@ -33,26 +30,14 @@ const Button = styled.button`
   border: none;
   font-size: 1.6rem;
   cursor: pointer;
-  margin-top: 0.6rem;
 `;
 
 const StyledModal = styled(Modal)`
-  /* overflow: auto; */
-  @media (prefers-color-scheme: dark) {
-    color: #000;
-  }
-`;
-
-const CenterDiv = styled.div`
-  display: ${props => props.display};
-  justify-content: center;
+  color: var(--primary-text);
 `;
 
 const HelpIcon = styled(HelpOutlineIcon)`
   color: var(--primary-logo);
-  @media (prefers-color-scheme: dark) {
-    color: white;
-  }
 `;
 
 export function HowToModal(props) {

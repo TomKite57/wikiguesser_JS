@@ -5,6 +5,7 @@ import { DateTime } from "luxon";
 import { useGuesses } from "./hooks/useGuesses";
 import { ButtonStyle } from './globalStyles';
 import { HowToModal } from './components/HowToModal';
+import { StatsModal } from "./components/StatsModal";
 import { ToastContainer, Flip, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
@@ -22,9 +23,14 @@ const Container = styled.div`
   margin-top: 1rem;
 `;
 
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const Title = styled.div`
   display: flex;
-  font-size: 4.5rem;
+  font-size: 3rem;
   cursor: pointer;
   font-weight: 500;
   user-select: none;
@@ -90,9 +96,8 @@ function App() {
   const dayString = useMemo(getDayString, []);
   const todaysTitle = useMemo(() => TITLES[Math.floor(seedrandom.alea(dayString)() * TITLES.length)]);
   console.log(TITLES.filter((title, index) => /[^a-z\s-'/]/.test(title.toLowerCase())));
-  const [answer, setAnswer] = useState(normalise(todaysTitle));
-  const [hints, setHints] = useState(all_hints[todaysTitle]);
-  const [lastHint, setLastHint] = useState("");
+  const [answer] = useState(normalise(todaysTitle));
+  const [hints] = useState(all_hints[todaysTitle]);
   const [input, setInput] = useState("");
   const [guesses, addGuess] = useGuesses(dayString);
   const [end, setEnd] = useState(false);
@@ -111,11 +116,7 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    //if (input === "") return;
-    // if (input === "" || !/^[A-Za-z]+$/.test(input)) return;
-    console.log("Handle guess")
-    addGuess({word: normalise(placeholder), hint: hints[guesses.length]});
-    console.log(guesses)
+    addGuess({word: normalise(placeholder), hint: hints[guesses.length], answer: answer});
     setInput("");
   }
 
@@ -135,7 +136,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (guesses.length > 0 && guesses[guesses.length-1].word == answer) {
+    if (guesses.length > 0 && guesses[guesses.length-1].word === answer) {
       setEnd(true);
       setWin(true);
       toast('Congratulations! Great guess! 🥳', {autoClose: 5000})
@@ -156,8 +157,10 @@ function App() {
         autoClose={false}
       />
       <Title>Wikiguesser</Title>
-      <HowToModal>
-      </HowToModal>
+      <IconContainer>
+        <HowToModal />
+        <StatsModal />
+      </IconContainer>
       <InputArea>
         <HiddenInput
           ref={inputRef}

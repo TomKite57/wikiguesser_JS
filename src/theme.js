@@ -1,26 +1,15 @@
-const lightPalette2 = {
-  primary: {
-    300: '#ffffff',
-    400: '#86585a',
-    500: '#cf6d5a',
-    600: '#8f351e',
-  },
-  secondary: {
-    300: '#9b605e',
-  }
-};
-
 const lightPalette = {
   primary: {
     300: '#ffffff',
-    400: '#414244',
+    400: '#323844',
     500: '#D0A600',
     600: '#735C00',
-    700: '#cecece',
+    700: '#ebebeb',
     800: '#FFCB00',
+    900: '#121212'
   },
   secondary: {
-    300: '#2A2A2B',
+    300: '#22252c',
     400: '#b97b7b'
   }
 };
