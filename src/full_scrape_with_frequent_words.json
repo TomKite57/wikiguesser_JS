@@ -227,18 +227,6 @@
         "coalition",
         "bonaparte"
     ],
-    "Sim\u00f3n Bol\u00edvar": [
-        "es",
-        "jos\u00e9",
-        "peru",
-        "colombia",
-        "venezuela",
-        "granada",
-        "caracas",
-        "venezuelan",
-        "royalist",
-        "santander"
-    ],
     "Abraham Lincoln": [
         "american",
         "support",
@@ -598,30 +586,6 @@
         "muhammad",
         "islamic",
         "muqaddimah"
-    ],
-    "Niccol\u00f2 Machiavelli": [
-        "modern",
-        "politics",
-        "revolution",
-        "republic",
-        "florence",
-        "classical",
-        "argued",
-        "influenced",
-        "strauss",
-        "discourses"
-    ],
-    "Ren\u00e9 Descartes": [
-        "knowledge",
-        "method",
-        "published",
-        "philosophy",
-        "edition",
-        "mathematics",
-        "passions",
-        "dualism",
-        "cartesian",
-        "meditations"
     ],
     "John Locke": [
         "social",
@@ -1282,18 +1246,6 @@
         "invariants",
         "noetherian",
         "g\u00f6ttingen"
-    ],
-    "Kurt G\u00f6del": [
-        "einstein",
-        "mathematics",
-        "mathematical",
-        "princeton",
-        "consistency",
-        "theorem",
-        "completeness",
-        "incompleteness",
-        "axiom",
-        "axioms"
     ],
     "Alan Turing": [
         "park",
@@ -3598,18 +3550,6 @@
         "brooklyn",
         "manhattan",
         "queens"
-    ],
-    "S\u00e3o Paulo": [
-        "area",
-        "museum",
-        "population",
-        "region",
-        "largest",
-        "brazil",
-        "urban",
-        "portuguese",
-        "brazilian",
-        "metropolitan"
     ],
     "The arts": [
         "games",
@@ -9847,18 +9787,6 @@
         "synthesis",
         "oxidation"
     ],
-    "Acid\u2013base reaction": [
-        "acid",
-        "definition",
-        "hydrogen",
-        "bases",
-        "ion",
-        "acids",
-        "ions",
-        "br\u00f8nsted\u2013lowry",
-        "arrhenius",
-        "h+"
-    ],
     "Catalysis": [
         "reaction",
         "thus",
@@ -11891,5 +11819,77 @@
         "interval",
         "variables",
         "null"
+    ],
+    "Simon Bolivar": [
+        "es",
+        "jos\u00e9",
+        "peru",
+        "colombia",
+        "venezuela",
+        "granada",
+        "caracas",
+        "venezuelan",
+        "royalist",
+        "santander"
+    ],
+    "Niccolo Machiavelli": [
+        "modern",
+        "politics",
+        "revolution",
+        "republic",
+        "florence",
+        "classical",
+        "argued",
+        "influenced",
+        "strauss",
+        "discourses"
+    ],
+    "Rene Descartes": [
+        "knowledge",
+        "method",
+        "published",
+        "philosophy",
+        "edition",
+        "mathematics",
+        "passions",
+        "dualism",
+        "cartesian",
+        "meditations"
+    ],
+    "Kurt Godel": [
+        "einstein",
+        "mathematics",
+        "mathematical",
+        "princeton",
+        "consistency",
+        "theorem",
+        "completeness",
+        "incompleteness",
+        "axiom",
+        "axioms"
+    ],
+    "Sao Paulo": [
+        "area",
+        "museum",
+        "population",
+        "region",
+        "largest",
+        "brazil",
+        "urban",
+        "portuguese",
+        "brazilian",
+        "metropolitan"
+    ],
+    "Acidbase reaction": [
+        "acid",
+        "definition",
+        "hydrogen",
+        "bases",
+        "ion",
+        "acids",
+        "ions",
+        "br\u00f8nsted\u2013lowry",
+        "arrhenius",
+        "h+"
     ]
 }
