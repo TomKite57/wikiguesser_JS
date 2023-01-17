@@ -96,7 +96,6 @@ const ATTEMPTS = 10
 function App() {
   const dayString = useMemo(getDayString, []);
   const todaysTitle = useMemo(() => TITLES[Math.floor(seedrandom.alea(dayString)() * TITLES.length)]);
-  console.log(TITLES.filter((title, index) => /[^a-z\s-'/]/.test(title.toLowerCase())));
   const [answer] = useState(normalise(todaysTitle));
   const [hints] = useState(all_hints[todaysTitle]);
   const [input, setInput] = useState("");
