@@ -10,6 +10,7 @@ import { ToastContainer, Flip, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
 import seedrandom from "seedrandom";
+import { Share } from "./components/Share";
 
 
 const Container = styled.div`
@@ -177,6 +178,14 @@ function App() {
       <Buttons>
         <Button onClick={handleGuess} disabled={end}>Guess!</Button>
       </Buttons>
+      {end && 
+        <Share 
+          win={win}
+          guesses={guesses}
+          end={end}
+          dayString={dayString}
+        /> 
+      }
       <Guesses guesses={guesses}
                answer={answer}/>
     </Container>
