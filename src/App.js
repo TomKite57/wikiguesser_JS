@@ -129,6 +129,7 @@ function App() {
   const maxLength = useMemo(() => normalise(answer).length, [answer]);
 
   const getHint = () => {
+    if (win) return "You won! 🥳";
     if (guesses.length > hints.length - 1) {
       return "Out of hints!"
     }
@@ -144,7 +145,7 @@ function App() {
       return;
     }
     if (guesses.length === 10) {
-      toast(`Better luck next time! The answer is ${todaysTitle}`, {autoClose: 5000})
+      toast(`Better luck next time! The answer is\n✨${todaysTitle}✨`);
       setEnd(true);
     }
   },[guesses]);
@@ -176,16 +177,17 @@ function App() {
       </InputArea>
       <Hint>Hint: <span>{getHint()}</span>, Guesses: <span>{ATTEMPTS-guesses.length}</span></Hint>
       <Buttons>
-        <Button onClick={handleGuess} disabled={end}>Guess!</Button>
+        {!end ?
+          <Button onClick={handleGuess} disabled={end}>Guess!</Button>
+          :
+          <Share 
+            win={win}
+            guesses={guesses}
+            end={end}
+            dayString={dayString}
+          /> 
+        }
       </Buttons>
-      {end && 
-        <Share 
-          win={win}
-          guesses={guesses}
-          end={end}
-          dayString={dayString}
-        /> 
-      }
       <Guesses guesses={guesses}
                answer={answer}/>
     </Container>
