@@ -11,7 +11,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
 import seedrandom from "seedrandom";
 import { Share } from "./components/Share";
+import axios from "axios";
 
+const isDev = () => !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+
+// const SERVER_URL = isDev() ? "127.0.0.1:5000" : "ryanbarouki.pythonanywhere.com";
+const SERVER_URL = "ryanbarouki.pythonanywhere.com"
 
 const Container = styled.div`
   display: flex;
@@ -77,7 +82,6 @@ const Hint = styled.div`
   }
 `;
 
-const isDev = () => !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 const getDayString = () => {
   return DateTime.now().toFormat(isDev() ? "yyyy-MM-dd-hh-mm-ss" : "yyyy-MM-dd");
@@ -116,8 +120,13 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    addGuess({word: normalise(placeholder), hint: hints[guesses.length], answer: answer});
-    setInput("");
+    axios.post(`//${SERVER_URL}/similarity`, {start: normalise(placeholder), end: answer})
+    .then(response => {
+      console.log(response.data.similarity)
+      addGuess({word: normalise(placeholder), hint: hints[guesses.length], answer: answer,
+      similarity: response.data.similarity});
+      setInput("");
+    })
   }
 
   const placeholder = useMemo(() => toPlaceholder(input, answer), [
