@@ -31,13 +31,39 @@ const Word = styled(Hint)`
   color: ${({correct}) => correct ? "green" : "#f44"};
 `;
 
+const NewWord = styled(Hint)`
+  display: inline-block;
+  grid-column: 4 / span 3;
+  gap: 10px;
+  }};
+`;
+
+const NewLetter = styled.div`
+  display: inline-block;
+  color: ${({ letter, index, answer }) => {
+    return answer.split("")[index] === letter ? "green" : "#f44";
+  }};
+`;
+
+//<span style="color:#FF0000">H</span>
+//<span style="color:#FF9966">l</span>
+//<span style="color:#FFCCCC">l</span>
+//<span style="color:#66CC66">e</span>
+//<span style="color:#FF0066">o</span>
+
+//<Word correct={answer === guess.word}>{guess.word}</Word>
+
 export function Guesses({ guesses, answer }) {
   return (
     <GuessBox>
       {guesses.map((guess, index) => (
         <GuessLine key={index}>
           <Hint>{`Hint: ${guess.hint}`}</Hint>
-          <Word correct={answer===guess.word}>{guess.word}</Word>
+          <NewWord>
+            {guess.word.split("").map((letter, index) => (
+              <NewLetter answer={answer} letter={letter} index={index}>{letter}</NewLetter>
+              ))}
+          </NewWord>
         </GuessLine>
       ))}
     </GuessBox>
