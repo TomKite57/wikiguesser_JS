@@ -11,6 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
 import seedrandom from "seedrandom";
 import { Share } from "./components/Share";
+import Autosuggest from 'react-autosuggest';
+import './Autosuggest.css';
 
 
 const Container = styled.div`
@@ -57,18 +59,6 @@ const Button = styled.button`
   ${ButtonStyle}
 `;
 
-const Placeholder = styled.span`
-  padding: 0 0 0.2em 0.2em;
-  font-size: 3em;
-  letter-spacing: 0.2em;
-`;
-
-const HiddenInput = styled.input`
-  opacity: 0;
-  position: fixed;
-  caret-color: transparent;
-`;
-
 const Hint = styled.div`
   color: var(--primary-text);
   font-size: 1.5rem;
@@ -77,16 +67,21 @@ const Hint = styled.div`
   }
 `;
 
+const StyledSuggest = styled(Autosuggest)`
+  color: #1a1a1a;
+`;
+
 const isDev = () => !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 const getDayString = () => {
   return DateTime.now().toFormat(isDev() ? "yyyy-MM-dd-hh-mm-ss" : "yyyy-MM-dd");
 }
 
-const toPlaceholder = (value, answer) =>
-  [...value].reduce((placeholder, char) => {
-    return placeholder.replace("_", char);
-  }, answer.replace(/[^\s-/]/g, "_"));
+const renderSuggestion = suggestion => (
+  <div>
+    {suggestion}
+  </div>
+);
 
 const normalise = value => value.toLowerCase().replace(/[^a-z\s-'\d/]/g, "");
 
@@ -102,7 +97,7 @@ function App() {
   const [guesses, addGuess] = useGuesses(dayString);
   const [end, setEnd] = useState(false);
   const [win, setWin] = useState(false);
-  const inputRef = useRef(null);
+  const [suggestions, setSuggestions] = useState([]);
 
   const handleInput = (e) => {
     if (/[\s-/]/.test(e.target.value)) return;
@@ -116,16 +111,9 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    addGuess({word: normalise(placeholder), hint: hints[guesses.length], answer: answer});
+    addGuess({word: input, hint: hints[guesses.length], answer: answer});
     setInput("");
   }
-
-  const placeholder = useMemo(() => toPlaceholder(input, answer), [
-    input,
-    answer
-  ]);
-
-  const maxLength = useMemo(() => normalise(answer).length, [answer]);
 
   const getHint = () => {
     if (win) return "You won! 🥳";
@@ -149,6 +137,23 @@ function App() {
     }
   },[guesses]);
 
+  const getSuggestions = value => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength === 0 ? [] : TITLES.filter(title =>
+      title.toLowerCase().slice(0, inputLength) === inputValue
+    );
+  };
+
+  const inputProps = {
+    placeholder: `Search for and article`,
+    value: input,
+    onChange: (event, { newValue }) => setInput(newValue),
+    onKeyDown: handleEnter,
+    disabled: end,
+  };
+
   return (
     <Container>
       <ToastContainer
@@ -163,16 +168,14 @@ function App() {
         <StatsModal />
       </IconContainer>
       <InputArea>
-        <HiddenInput
-          ref={inputRef}
-          onChange={handleInput}
-          onKeyDown={handleEnter}
-          value={input}
-          maxLength={maxLength}
-          autoFocus
-          disabled={end}
+        <StyledSuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(value))}
+          onSuggestionsClearRequested={() => setSuggestions([])}
+          getSuggestionValue={suggestion => suggestion}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
         />
-        <Placeholder onClick={() => inputRef.current.focus()}>{placeholder}</Placeholder>
       </InputArea>
       <Hint>Hint: <span>{getHint()}</span>, Guesses: <span>{ATTEMPTS-guesses.length}</span></Hint>
       <Buttons>
