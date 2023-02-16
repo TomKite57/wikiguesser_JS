@@ -13,6 +13,7 @@ import seedrandom from "seedrandom";
 import { Share } from "./components/Share";
 import Autosuggest from 'react-autosuggest';
 import './Autosuggest.css';
+import axios from 'axios';
 
 
 const Container = styled.div`
@@ -86,23 +87,19 @@ const renderSuggestion = suggestion => (
 const normalise = value => value.toLowerCase().replace(/[^a-z\s-'\d/]/g, "");
 
 const TITLES = Object.keys(all_hints);
-const ATTEMPTS = 10
+const ATTEMPTS = 10;
+const SDOW_URL = 'https://api.sixdegreesofwikipedia.com';
 
 function App() {
   const dayString = useMemo(getDayString, []);
   const todaysTitle = useMemo(() => TITLES[Math.floor(seedrandom.alea(dayString)() * TITLES.length)]);
-  const [answer] = useState(normalise(todaysTitle));
   const [hints] = useState(all_hints[todaysTitle]);
   const [input, setInput] = useState("");
   const [guesses, addGuess] = useGuesses(dayString);
+  const [guessStats, setGuessStats] = useState({});
   const [end, setEnd] = useState(false);
   const [win, setWin] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
-
-  const handleInput = (e) => {
-    if (/[\s-/]/.test(e.target.value)) return;
-    setInput(e.target.value);
-  };
 
   const handleEnter = (e) => {
     if (e.keyCode === 13 && !end) {
@@ -111,8 +108,25 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    addGuess({word: input, hint: hints[guesses.length], answer: answer});
+    addGuess({ word: input, hint: hints[guesses.length], answer: todaysTitle });
     setInput("");
+    const currentGuess = input;
+
+    if (input.length === 0) return;
+
+    axios.post(`${SDOW_URL}/paths`, { 'source': input, 'target': todaysTitle })
+      .then((response) => {
+        const paths = response.data.paths
+        if (paths.length === 0) return;
+        setGuessStats(stats => ({
+          ...stats, [currentGuess]: {
+            'numPaths': paths.length,
+            'pathLength': paths.length > 0 ? paths[0].length : 0
+          }
+        }))
+      },
+      (error) => console.log(error.message)
+      )
   }
 
   const getHint = () => {
@@ -125,7 +139,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (guesses.length > 0 && guesses[guesses.length-1].word === answer) {
+    if (guesses.length > 0 && guesses[guesses.length-1].word === todaysTitle) {
       setEnd(true);
       setWin(true);
       toast('Congratulations! Great guess! 🥳', {autoClose: 5000})
@@ -147,7 +161,7 @@ function App() {
   };
 
   const inputProps = {
-    placeholder: `Search for and article`,
+    placeholder: `Search for an article`,
     value: input,
     onChange: (event, { newValue }) => setInput(newValue),
     onKeyDown: handleEnter,
@@ -191,7 +205,8 @@ function App() {
         }
       </Buttons>
       <Guesses guesses={guesses}
-               answer={answer}/>
+               guessStats = {guessStats}
+               answer={todaysTitle}/>
     </Container>
   );
 }
