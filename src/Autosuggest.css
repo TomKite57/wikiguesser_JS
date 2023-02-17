@@ -60,7 +60,7 @@ body {
 
   @media (prefers-color-scheme: dark) {
     .react-autosuggest__suggestions-container--open {
-      color: black;
+      color: white;
     }
   }
   
