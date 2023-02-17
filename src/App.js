@@ -11,6 +11,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import all_hints from "./full_scrape_with_frequent_words.json"
 import seedrandom from "seedrandom";
 import { Share } from "./components/Share";
+import Autosuggest from 'react-autosuggest';
+import './Autosuggest.css';
+import axios from 'axios';
 
 
 const Container = styled.div`
@@ -57,18 +60,6 @@ const Button = styled.button`
   ${ButtonStyle}
 `;
 
-const Placeholder = styled.span`
-  padding: 0 0 0.2em 0.2em;
-  font-size: 3em;
-  letter-spacing: 0.2em;
-`;
-
-const HiddenInput = styled.input`
-  opacity: 0;
-  position: fixed;
-  caret-color: transparent;
-`;
-
 const Hint = styled.div`
   color: var(--primary-text);
   font-size: 1.5rem;
@@ -77,37 +68,38 @@ const Hint = styled.div`
   }
 `;
 
+const StyledSuggest = styled(Autosuggest)`
+  color: #1a1a1a;
+`;
+
 const isDev = () => !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 const getDayString = () => {
   return DateTime.now().toFormat(isDev() ? "yyyy-MM-dd-hh-mm-ss" : "yyyy-MM-dd");
 }
 
-const toPlaceholder = (value, answer) =>
-  [...value].reduce((placeholder, char) => {
-    return placeholder.replace("_", char);
-  }, answer.replace(/[^\s-/]/g, "_"));
+const renderSuggestion = suggestion => (
+  <div>
+    {suggestion}
+  </div>
+);
 
 const normalise = value => value.toLowerCase().replace(/[^a-z\s-'\d/]/g, "");
 
 const TITLES = Object.keys(all_hints);
-const ATTEMPTS = 10
+const ATTEMPTS = 10;
+const SDOW_URL = 'https://api.sixdegreesofwikipedia.com';
 
 function App() {
   const dayString = useMemo(getDayString, []);
   const todaysTitle = useMemo(() => TITLES[Math.floor(seedrandom.alea(dayString)() * TITLES.length)]);
-  const [answer] = useState(normalise(todaysTitle));
   const [hints] = useState(all_hints[todaysTitle]);
   const [input, setInput] = useState("");
   const [guesses, addGuess] = useGuesses(dayString);
+  const [guessStats, setGuessStats] = useState({});
   const [end, setEnd] = useState(false);
   const [win, setWin] = useState(false);
-  const inputRef = useRef(null);
-
-  const handleInput = (e) => {
-    if (/[\s-/]/.test(e.target.value)) return;
-    setInput(e.target.value);
-  };
+  const [suggestions, setSuggestions] = useState([]);
 
   const handleEnter = (e) => {
     if (e.keyCode === 13 && !end) {
@@ -116,16 +108,26 @@ function App() {
   };
 
   const handleGuess = (e) => {
-    addGuess({word: normalise(placeholder), hint: hints[guesses.length], answer: answer});
+    addGuess({ word: input, hint: hints[guesses.length], answer: todaysTitle });
     setInput("");
+    const currentGuess = input;
+
+    if (input.length === 0) return;
+
+    axios.post(`${SDOW_URL}/paths`, { 'source': input, 'target': todaysTitle })
+      .then((response) => {
+        const paths = response.data.paths
+        if (paths.length === 0) return;
+        setGuessStats(stats => ({
+          ...stats, [currentGuess]: {
+            'numPaths': paths.length,
+            'pathLength': paths.length > 0 ? paths[0].length : 0
+          }
+        }))
+      },
+      (error) => console.log(error.message)
+      )
   }
-
-  const placeholder = useMemo(() => toPlaceholder(input, answer), [
-    input,
-    answer
-  ]);
-
-  const maxLength = useMemo(() => normalise(answer).length, [answer]);
 
   const getHint = () => {
     if (win) return "You won! 🥳";
@@ -137,7 +139,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (guesses.length > 0 && guesses[guesses.length-1].word === answer) {
+    if (guesses.length > 0 && guesses[guesses.length-1].word === todaysTitle) {
       setEnd(true);
       setWin(true);
       toast('Congratulations! Great guess! 🥳', {autoClose: 5000})
@@ -148,6 +150,23 @@ function App() {
       setEnd(true);
     }
   },[guesses]);
+
+  const getSuggestions = value => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+
+    return inputLength === 0 ? [] : TITLES.filter(title =>
+      title.toLowerCase().slice(0, inputLength) === inputValue
+    );
+  };
+
+  const inputProps = {
+    placeholder: `Search for an article`,
+    value: input,
+    onChange: (event, { newValue }) => setInput(newValue),
+    onKeyDown: handleEnter,
+    disabled: end,
+  };
 
   return (
     <Container>
@@ -163,16 +182,14 @@ function App() {
         <StatsModal />
       </IconContainer>
       <InputArea>
-        <HiddenInput
-          ref={inputRef}
-          onChange={handleInput}
-          onKeyDown={handleEnter}
-          value={input}
-          maxLength={maxLength}
-          autoFocus
-          disabled={end}
+        <StyledSuggest
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={({ value }) => setSuggestions(getSuggestions(value))}
+          onSuggestionsClearRequested={() => setSuggestions([])}
+          getSuggestionValue={suggestion => suggestion}
+          renderSuggestion={renderSuggestion}
+          inputProps={inputProps}
         />
-        <Placeholder onClick={() => inputRef.current.focus()}>{placeholder}</Placeholder>
       </InputArea>
       <Hint>Hint: <span>{getHint()}</span>, Guesses: <span>{ATTEMPTS-guesses.length}</span></Hint>
       <Buttons>
@@ -188,7 +205,8 @@ function App() {
         }
       </Buttons>
       <Guesses guesses={guesses}
-               answer={answer}/>
+               guessStats = {guessStats}
+               answer={todaysTitle}/>
     </Container>
   );
 }
