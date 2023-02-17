@@ -2,12 +2,16 @@ body {
     font-family: Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px;
+    /*
+    color: #2e2e2e;
+    */
   }
   
   .react-autosuggest__container {
     position: relative;
   }
   
+  /* This is the box before typing in */
   .react-autosuggest__input {
     width: 240px;
     height: 30px;
@@ -15,7 +19,9 @@ body {
     font-family: Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px;
-    border: 1px solid #aaa;
+    border: 1px solid #878787;
+    background-color: rgb(65, 65, 65);
+    color: rgb(208, 208, 208);
     border-radius: 4px;
   }
   
@@ -23,22 +29,26 @@ body {
     outline: none;
   }
   
+  /* This is the box you type in */
   .react-autosuggest__input--open {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    background-color: rgb(65, 65, 65);
+    color: rgb(208, 208, 208);
   }
   
   .react-autosuggest__suggestions-container {
     display: none;
   }
   
+  /* This is the box that pops open */
   .react-autosuggest__suggestions-container--open {
     display: block;
     position: absolute;
     top: 51px;
     width: 280px;
-    border: 1px solid #aaa;
-    background-color: #fff;
+    border: 1px solid #878787;
+    background-color: rgb(65, 65, 65);
     font-family: Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -50,7 +60,7 @@ body {
 
   @media (prefers-color-scheme: dark) {
     .react-autosuggest__suggestions-container--open {
-      color: black;
+      color: white;
     }
   }
   
@@ -66,6 +76,6 @@ body {
   }
   
   .react-autosuggest__suggestion--highlighted {
-    background-color: #ddd;
+    background-color: #585858;
   }
   

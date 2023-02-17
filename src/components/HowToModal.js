@@ -79,6 +79,10 @@ export function HowToModal(props) {
             There are 10 hints in total.
           </Typography>
           <Typography id="modal-modal-paragraph" component="p">
+            It also tells you the number of paths and path length from your guess to 
+            the final article.
+          </Typography>
+          <Typography id="modal-modal-paragraph" component="p">
             Good luck!
           </Typography>
         </StyledBox>
