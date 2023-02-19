@@ -87,7 +87,7 @@ const renderSuggestion = suggestion => (
 const normalise = value => value.toLowerCase().replace(/[^a-z\s-'\d/]/g, "");
 
 const TITLES = Object.keys(all_hints);
-const ATTEMPTS = 10;
+const ATTEMPTS = 11;
 const SDOW_URL = 'https://api.sixdegreesofwikipedia.com';
 
 function App() {
@@ -145,7 +145,7 @@ function App() {
       toast('Congratulations! Great guess! 🥳', {autoClose: 5000})
       return;
     }
-    if (guesses.length === 10) {
+    if (guesses.length === ATTEMPTS) {
       toast(`Better luck next time! The answer is\n✨${todaysTitle}✨`);
       setEnd(true);
     }
