@@ -65,6 +65,7 @@ const Hint = styled.div`
   font-size: 1.5rem;
   span {
     color: var(--primary-highlight);
+    white-space:pre;
   }
 `;
 
